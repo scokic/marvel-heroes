@@ -1,0 +1,43 @@
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 300px;
+  text-align: center;
+  margin: 10px;
+  padding-top: 25px;
+  transition: 0.25s ease;
+  border-radius: 5px;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(102, 102, 102, 0.4);
+    cursor: pointer;
+  }
+}
+
+.hero-image {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(102, 102, 102, 0.25);
+  background-image: "../../img/alt-hero-image.svg";
+}
+
+.hero-name {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+span {
+  color: grey;
+  position: fixed;
+  bottom: 100px;
+}
