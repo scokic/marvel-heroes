@@ -1,0 +1,118 @@
+.modal-background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: grid;
+  place-items: center;
+
+  .modal-container {
+    display: flex;
+    height: 600px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .hero-image,
+  .hero-info-container {
+    width: 30vw;
+  }
+
+  .hero-image {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  .hero-info-container {
+    padding: 25px;
+    align-self: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: scroll;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+
+  h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  display: grid;
+  place-items: center;
+
+  &:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+  }
+}
+
+.marvel-logo {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  max-height: 50px;
+  background-color: white;
+  padding: 0px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .modal-container {
+    height: 80vh !important;
+    flex-direction: column;
+
+    .hero-info-container {
+      width: 80vw !important;
+      height: 50vh !important;
+    }
+
+    .hero-image {
+      border-radius: 5px 5px 0px 0px;
+      width: 80vw;
+      height: 30vh;
+    }
+  }
+
+  .marvel-logo {
+    max-height: 40px;
+    bottom: calc(50vh + 15px);
+  }
+
+  .close-button {
+    top: calc(10vh + 20px);
+    right: calc(10vw + 15px);
+    position: fixed;
+  }
+}

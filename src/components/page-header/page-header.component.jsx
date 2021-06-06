@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom/cjs/react-dom.development";
 import "./page-header.styles.scss";
 
 function PageHeader({ name, description }) {

@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import "./hero-card.styles.scss";
-import Modal from "react-modal";
+import Modal from "../modal/modal.component";
 
-Modal.setAppElement("#root");
+function HeroCard({ id, image, name, description, series }) {
+  const [showModal, setShowModal] = useState(false);
 
-function HeroCard({ id, image, name, description }) {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
 
   return (
-    <div className='hero-card' key={id} onClick={() => setModalIsOpen(true)}>
-      <img className='hero-image' src={`${image}.jpg`} alt={name} />
-      <h2 className='hero-name'>{name}</h2>
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <div>
-          <span>Press escape to quit</span>
-        </div>
-      </Modal>
-    </div>
+    <>
+      <div className='hero-card' key={id} onClick={openModal}>
+        <img className='hero-image' src={`${image}.jpg`} alt={name} />
+        <h2 className='hero-name'>{name}</h2>
+      </div>
+      <Modal showModal={showModal} setShowModal={setShowModal} name={name} description={description} image={image} series={series} />
+    </>
   );
 }
 

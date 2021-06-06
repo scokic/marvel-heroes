@@ -35,7 +35,7 @@ class HeroesList extends Component {
       <div className='hero-grid'>
         <div className='hero-grid-wrapper'>
           {this.state.heroes.map((hero) => (
-            <HeroCard key={hero.id} name={hero.name} image={hero.thumbnail.path} description={hero.description} />
+            <HeroCard key={hero.id} name={hero.name} image={hero.thumbnail.path} description={hero.description} series={hero.series.items} />
           ))}
         </div>
       </div>
