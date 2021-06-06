@@ -16,8 +16,8 @@ class HeroesList extends Component {
   async componentDidMount() {
     const marvelUrl = "https://gateway.marvel.com/v1/public/characters?";
     let ts = Date.now();
-    const publicKey = "eeeeb8cb5ea5a09c3a246629fe6116e3";
-    const privateKey = "bef13beac133fa543b19319ffc17d736ede2956e";
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+    const privateKey = process.env.REACT_APP_PRIVATE_KEY;
     let hash = MD5(`${ts}${privateKey}${publicKey}`);
     let callString = `${marvelUrl}ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=24`;
 
