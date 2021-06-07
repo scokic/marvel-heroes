@@ -1,10 +1,14 @@
 .page-header {
   display: grid;
   place-items: center;
-  margin: 35px auto 20px auto;
+  margin: 20px auto;
   text-align: center;
 
   p {
     margin: 25px 15px 15px 15px;
+  }
+
+  .marvel-header-logo {
+    max-width: 250px;
   }
 }

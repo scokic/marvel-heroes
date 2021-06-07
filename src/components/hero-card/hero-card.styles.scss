@@ -36,8 +36,15 @@
   margin-top: 0.5rem;
 }
 
-span {
-  color: grey;
-  position: fixed;
-  bottom: 100px;
+@media (max-width: 600px) {
+  .hero-card {
+    width: 45vw;
+    height: 70vw;
+    padding: 15px 0px 10px 0px;
+    margin: 5px;
+
+    .hero-image {
+      width: 85%;
+    }
+  }
 }
