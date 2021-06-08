@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./page-header.styles.scss";
 import Logo from "../../img/Marvel-Studios-Symbol.png";
 

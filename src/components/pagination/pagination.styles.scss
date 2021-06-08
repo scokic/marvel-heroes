@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+button {
+  background-color: #efefef;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  margin: 0px 0.5rem;
+  cursor: pointer;
+}
