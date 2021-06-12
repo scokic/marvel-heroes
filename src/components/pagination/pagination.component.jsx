@@ -11,7 +11,7 @@ class Pagination extends React.Component {
           ) : (
             <>
               <button className='prev-page-btn' onClick={this.props.prevPage}>
-                -
+                {`< prev`}
               </button>
               <button className='first-page-btn' onClick={this.props.firstPage}>
                 1
@@ -33,7 +33,7 @@ class Pagination extends React.Component {
                 {this.props.totalPages}
               </button>
               <button className='next-page-btn' onClick={this.props.nextPage}>
-                +
+                {` next >`}
               </button>
             </>
           )}

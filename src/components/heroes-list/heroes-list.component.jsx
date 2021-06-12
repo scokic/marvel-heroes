@@ -103,14 +103,19 @@ class HeroesList extends React.Component {
 
     return (
       <div className='hero-grid'>
-        <Pagination page={this.state.page} nextPage={this.nextPage} prevPage={this.prevPage} totalPages={this.state.totalPages} firstPage={this.firstPage} lastPage={this.lastPage} />{" "}
         {this.state.loading ? (
-          <div class='loader'></div>
+          <div className='loader'></div>
         ) : (
-          <div className='hero-grid-wrapper'>
-            {this.state.heroes.map((hero) => (
-              <HeroCard key={hero.id} name={hero.name} image={hero.thumbnail.path} description={hero.description} series={hero.series.items} />
-            ))}{" "}
+          <div className='hero-component-wrapper'>
+            <div className='list-info-wrapper'>
+              <h3 className='hero-list-header'>All Heroes</h3>
+              <div className='total-hero-info'>Total Heroes: {this.state.totalHeroes}</div>
+            </div>
+            <div className='hero-grid-wrapper'>
+              {this.state.heroes.map((hero) => (
+                <HeroCard key={hero.id} name={hero.name} image={hero.thumbnail.path} imageExtension={hero.thumbnail.extension} description={hero.description} series={hero.series.items} />
+              ))}{" "}
+            </div>
           </div>
         )}
         <Pagination page={this.state.page} nextPage={this.nextPage} prevPage={this.prevPage} totalPages={this.state.totalPages} firstPage={this.firstPage} lastPage={this.lastPage} />
