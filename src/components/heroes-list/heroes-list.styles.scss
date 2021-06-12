@@ -5,3 +5,39 @@
   margin: auto;
   justify-content: center;
 }
+
+.out-of-calls {
+  padding-top: 25px;
+  padding-bottom: 75px;
+  text-align: center;
+}
+
+.loader {
+  margin: auto;
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #3498db;
+  width: 90px;
+  height: 90px;
+  -webkit-animation: spin 2.5s linear infinite; /* Safari */
+  animation: spin 2.5s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
